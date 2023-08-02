@@ -1,0 +1,67 @@
+/* Background color for the entire screen */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3e0be; /* Pale orange background for the entire page */
+}
+
+/* Additional CSS for .screen class */
+.screen {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8dbbc; /* Light yellow background for the main screen */
+  font-family: "Arial", sans-serif;
+}
+
+/* Additional CSS for .showCard class */
+.showCard {
+  flex: 1;
+  padding: 40px;
+  background-color: #f9cdaa; /* Light apricot background for the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.showCard h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #5e503f; /* Dark brown text color for the heading */
+}
+
+.showCard p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #7f6d58; /* Dark brown text color for the paragraph */
+}
+
+/* Additional CSS for .showImage class */
+.showImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #aed3c0; /* Light green background for the image container */
+  border-radius: 10px;
+  overflow: hidden; /* Hide any overflowing content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional CSS for .showImage img class */
+.showImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.showImage:hover img {
+  transform: scale(1.1); /* Enlarge the image slightly on hover */
+}

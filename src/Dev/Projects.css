@@ -1,0 +1,43 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 300px;
+  min-height: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Modified box-shadow to have a transparent white color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth scaling and box-shadow changes */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h2 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.technologies {
+  color: lightgreen;
+  margin-bottom: 10px;
+}
