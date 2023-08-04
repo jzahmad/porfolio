@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
-import myImage from './prof.jpg';
+import myImage from './Picture.jpg';
 import './Home.css';
 
 const name = 'Jazib Ahmad';
@@ -14,9 +14,9 @@ function Home() {
   const linkedInId = "jazib-ahmad-19457a230";
 
   // Delay time in milliseconds (adjust as needed)
-  const delayTime1 = 3000; // Set the desired delay for content 1
-  const delayTime2 = 4000; // Set the desired delay for content 2
-  const delayTime3 = 5000; // Set the desired delay for content 3
+  const delayTime1 = 2000; // Set the desired delay for content 1
+  const delayTime2 = 3000; // Set the desired delay for content 2
+  const delayTime3 = 4000; // Set the desired delay for content 3
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
@@ -39,8 +39,8 @@ function Home() {
     };
   }, []);
 
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${email}`;
+  const handleEmailClick = (a) => {
+    window.location.href = `mailto:${a}`;
   };
 
   const handlePhoneClick = () => {
@@ -58,7 +58,7 @@ function Home() {
         {showContent1 && (
           <CardContent>
             <Typography variant="h4">
-              {name} (Student)
+              {name}
             </Typography>
           </CardContent>
         )}
@@ -82,10 +82,13 @@ function Home() {
                 Phone: <a href={`tel:${phoneNumber}`} onClick={handlePhoneClick}>{phoneNumber}</a>
               </p>
               <p>
-                Email: <a href={`mailto:${email}`} onClick={handleEmailClick}>{email}</a>
+                Email: <a href={`mailto:${email}`} onClick={handleEmailClick(email)}>{email}</a>
               </p>
               <p>
-                LinkedIn: <a href={`https://www.linkedin.com/in/${linkedInId}`} onClick={handleLinkedInClick} target="_blank" rel="noopener noreferrer">
+              School mail: <a href={`mailto:${"jz346475@dal.ca"}`} onClick={handleEmailClick("jz346475@dal.ca")}>{"jz346475@dal.ca"}</a>
+              </p>
+              <p>
+                LinkedIn: <a href={`https://www.linkedin.com/in/${linkedInId}`} onClick={handleLinkedInClick}>
                   {linkedInId}
                 </a>
               </p>

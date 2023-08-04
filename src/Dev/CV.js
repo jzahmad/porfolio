@@ -6,9 +6,9 @@ function EducationItem({ institution, duration, courses }) {
     <div className="education-item">
       <h3>{institution}</h3>
       <p>{duration}</p>
-      <ul style={{}}>
-        {courses.map((course, index) => (
-          <li key={index}>{course}</li>
+      <ul>
+        {courses.map((course) => (
+          <li>{course}</li>
         ))}
       </ul>
     </div>
@@ -30,16 +30,16 @@ function Skills({ technical, interpersonal }) {
       <div className="technical-skills">
         <h3>Technical Skills</h3>
         <ul>
-          {technical.map((skill, index) => (
-            <li key={index}>{skill}</li>
+          {technical.map((skill) => (
+            <li>{skill}</li>
           ))}
         </ul>
       </div>
       <div className="interpersonal-skills">
         <h3>Interpersonal Skills</h3>
         <ul>
-          {interpersonal.map((skill, index) => (
-            <li key={index}>{skill}</li>
+          {interpersonal.map((skill) => (
+            <li>{skill}</li>
           ))}
         </ul>
       </div>
@@ -54,8 +54,8 @@ function OtherExperience({ title, duration, location, responsibilities }) {
       <p>{duration}</p>
       <p>{location}</p>
       <ul>
-        {responsibilities.map((responsibility, index) => (
-          <li key={index}>{responsibility}</li>
+        {responsibilities.map((responsibility) => (
+          <li>{responsibility}</li>
         ))}
       </ul>
     </div>
@@ -68,12 +68,13 @@ function CV() {
     {
       institution: 'Bachelor of Computer Science, Saint Mary’s University',
       duration: '2021 – 2022',
-      courses: ['Intro to Web development', 'Data Structure & Algorithms', 'OOP',],
+      courses: ['Intro to Web development', 'Data Structure & Algorithms', 'Introduction to Programing','Object Oriented Programming'],
     },
     {
       institution: 'Bachelor of Computer Science, Dalhousie University',
       duration: '2022 – 2025',
-      courses: ['Software Development', 'Database Systems', 'System Programming'],
+      courses: ['Software Development', 'Database Systems', 'System Programming','Computer Systems',
+      'Software Engineering','Data Mining','Experimental Robotics'],
     },
   ];
 
@@ -127,9 +128,8 @@ function CV() {
         <div className="left-section">
           <div className="education-section">
             <h2>Education</h2>
-            {educationData.map((education, index) => (
+            {educationData.map((education) => (
               <EducationItem
-                key={index}
                 institution={education.institution}
                 duration={education.duration}
                 courses={education.courses}
@@ -145,9 +145,8 @@ function CV() {
           <CoopStatus status={coopStatusData} />
           <div className="other-experience-section">
             <h2>Other Experience</h2>
-            {otherExperienceData.map((experience, index) => (
+            {otherExperienceData.map((experience) => (
               <OtherExperience
-                key={index}
                 title={experience.title}
                 duration={experience.duration}
                 location={experience.location}
