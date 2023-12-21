@@ -79,7 +79,7 @@ function CV() {
   ];
 
   // Coop status data
-  const coopStatusData = 'Seeking a 4-to-8-month work term in fall 2023';
+  const coopStatusData = 'Seeking a 4-to-8-month work term in from winter 2024 onwards';
 
   // Skills data
   // Skills data
